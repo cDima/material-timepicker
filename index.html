@@ -8,19 +8,19 @@
 
         <title>Material Timepicker</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
-        <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/dark.min.css" type="text/css" />
+        <link rel="stylesheet" href="./dist/css/timepicker.css" type="text/css" media="all" />
+
         <style>
-            #view-source {
-                position: fixed;
+            .section--center {
+                max-width: 900px;
+            }
+            .mdl-textfield {
                 display: block;
-                right: 0;
-                bottom: 0;
-                margin-right: 40px;
-                margin-bottom: 40px;
-                z-index: 900;
+                margin: 0 auto;
             }
         </style>
     </head>
@@ -28,66 +28,159 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">Title</span>
+                    <span class="mdl-layout-title">Material Timepicker</span>
                     <div class="mdl-layout-spacer"></div>
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
                         <a class="mdl-navigation__link" href="/">Home</a>
                         <a class="mdl-navigation__link" href="tests.html">Tests</a>
+                        <a class="mdl-navigation__link" href="https://github.com/hownowbrowncow/material-timepicker">Github</a>
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Title</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/">Home</a>
                     <a class="mdl-navigation__link" href="tests.html">Tests</a>
+                    <a class="mdl-navigation__link" href="https://github.com/hownowbrowncow/material-timepicker">Github</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
-                <div class="mdl-layout__tab-panel is-active" id="overview">
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-card__supporting-text">
-                                <h4>About</h4>
-                                Reasons I built this:
+                <section class="section--center mdl-grid">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">About</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Reasons for building:
 
-                                <ul>
-                                    <li>No pickers currently available in Material Design Lite project</li>
-                                    <li>Need for it in a current project I am working on</li>
-                                    <li>Excuse to get better at writing vanilla JS (written in ES6)</li>
-                                    <li>Excuse to get better at testing JS code (tested with mocha, chai, and sinon)</li>
-                                    <li>Project to pad my resume with =)</li>
-                                </ul>
+                            <ul>
+                                <li>No timepicker currently available in MDL library</li>
+                                <li>Reason to get better at writing vanilla JS (written in ES6)</li>
+                                <li>Reason to get better at testing JS code (tested with mocha, chai, sinon)</li>
+                                <li>Alternative OS timepickers require dependencies I didn't need outside a of timepicker</li>
+                                <li>Need for it in a current project</li>
+                                <li>Project to pad my resume with =)</li>
+                            </ul>
+
+                            This project is my first for a lot of things, so it's likely that not everything is done the best or most proper way. Feedback is appreciated and encouraged!
+                        </div>
+                    </div> 
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">bindInput Example</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--middle">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="bind-example" />
+                                    <label class="mdl-textfield__label" for="bind-example">Standard Format</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+                                bindInput will set an event listener on the input element. When a focus event is trigger the timepicker will be opened with the input element in context.
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle"> <pre><code class="JavaScript">
+var timepicker = new TimePicker();
+
+timepicker.bindInput('#bind-example');
+</code></pre>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--middle">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="bind-example-military" />
+                                    <label class="mdl-textfield__label" for="bind-example-military">Military Format</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+                                It is also possible to pass an HTMLElement instead of a selector. This example also uses the military time format option.
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+<pre><code class="JavaScript">
+var timepicker = new TimePicker()
+    inputEl = document.getElementById('bind-example-military');
+
+timepicker.bindInput(inputEl, {timeFormat: 'military'});
+</code></pre>
                             </div>
                         </div>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                <h4 class="mdl-cell mdl-cell--12-col"><code>bindInput</code> Example</h4>
+                    </div> 
+
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">openOnInput Example</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--middle ">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="openOn-example" />
+                                    <label class="mdl-textfield__label" for="openOn-example">Standard Format</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+                                openOnInput allows for more customized usage. Instead of setting an event listener on the input element, it will open on the input passed when called.
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+<pre><code class="JavaScript">
+var timepicker = new TimePicker(),
+    openOnStandard = document.getElementById('#openOn-example');
+
+openOnStandard.addEventListener('focus', function(event) {
+    timepicker.openOnInput(event.target);
+});
+</code></pre>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--middle ">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="openOn-example-military" />
+                                    <label class="mdl-textfield__label" for="openOn-example-military">Military Format</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+                                openOnInput example using military time format option.
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+<pre><code class="JavaScript">
+var timepicker = new TimePicker(),
+    openOnMilitary = document.getElementById('#openOn-example-military');
+
+openOnMilitary.addEventListener('focus', function(event) {
+    timepicker.openOnInput(event.target);
+});
+</code></pre>
                             </div>
                         </div>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                <h4 class="mdl-cell mdl-cell--12-col"><code>openOnInput</code> Example</h4>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <footer class="mdl-mega-footer">
-                    <div class="mdl-mega-footer--bottom-section">
-                        <div class="mdl-logo">
-                            Made with &#10084; by Nick C.
-                        </div>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="https://github.com/hownowbrowncow">Github</a></li>
+                    </div> 
+                </section>
+                <footer class="mdl-mini-footer">
+                    <div class="mdl-mini-footer__left-section">
+                        <div class="mdl-logo">Made with &#10084; by Nick C.</div>
+                        <ul class="mdl-mini-footer__link-list">
+                            <li><a target="blank" href="https://github.com/hownowbrowncow">Github</a></li>
                         </ul>
                     </div>
                 </footer>
             </main>
         </div>
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+        <script src="./dist/js/timepicker.js"></script>
+        <script>
+            var timepicker = new TimePicker(),
+                bindMilitary = document.getElementById('bind-example-military'),
+                openOnStandard = document.getElementById('openOn-example'),
+                openOnMilitary = document.getElementById('openOn-example-military');
+
+            timepicker.bindInput('#bind-example');
+            timepicker.bindInput(bindMilitary, {timeFormat: 'military'});
+
+            openOnStandard.addEventListener('focus', function(event) {
+                timepicker.openOnInput(event.target);
+            });
+
+            openOnMilitary.addEventListener('focus', function(event) {
+                timepicker.openOnInput(event.target, {timeFormat: 'military'});
+            });
+            hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>
