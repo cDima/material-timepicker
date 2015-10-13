@@ -31,33 +31,23 @@
                     <span class="mdl-layout-title">Title</span>
                     <div class="mdl-layout-spacer"></div>
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="/">Link</a>
-                        <a class="mdl-navigation__link" href="tests.html">Link</a>
+                        <a class="mdl-navigation__link" href="/">Home</a>
+                        <a class="mdl-navigation__link" href="tests.html">Tests</a>
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Title</span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="/">Link</a>
-                    <a class="mdl-navigation__link" href="tests.html">Link</a>
+                    <a class="mdl-navigation__link" href="/">Home</a>
+                    <a class="mdl-navigation__link" href="tests.html">Tests</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-card__supporting-text">
-                                <h4>About</h4>
-                                Reasons I built this:
-
-                                <ul>
-                                    <li>No pickers currently available in Material Design Lite project</li>
-                                    <li>Need for it in a current project I am working on</li>
-                                    <li>Excuse to get better at writing vanilla JS (written in ES6)</li>
-                                    <li>Excuse to get better at testing JS code (tested with mocha, chai, and sinon)</li>
-                                    <li>Project to pad my resume with =)</li>
-                                </ul>
+                            <div class="mdl-card__supporting-text" id="mocha">
                             </div>
                         </div>
                     </section>
@@ -74,6 +64,18 @@
                 </footer>
             </main>
         </div>
+        <script src="./scripts/mocha.js"></script>
+        <script src="./scripts/chai.js"></script>
+        <script src="./scripts/sinon.js"></script>
+        <script>
+            mocha.setup('bdd');
+            var assert = chai.assert;
+            var expect = chai.expect;
+            var should = chai.should;
+        </script>
+        <script>
+            mocha.run();
+        </script>
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     </body>
 </html>
