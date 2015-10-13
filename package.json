@@ -1,0 +1,48 @@
+{
+  "name": "material-timepicker",
+  "version": "0.0.1",
+  "description": "material design timepicker",
+  "main": "./dist/js/timepicker.js",
+  "scripts": {
+    "test": "gulp test:unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hownowbrowncow/material-timepicker.git"
+  },
+  "keywords": [
+    "timepicker",
+    "material-timepicker"
+  ],
+  "author": "Nick C",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hownowbrowncow/material-timepicker/issues"
+  },
+  "homepage": "https://github.com/hownowbrowncow/material-timepicker#readme",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "html-browserify"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "chai": "^3.3.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha-phantomjs": "^0.10.1",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.6",
+    "html-browserify": "0.0.6",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.1",
+    "source-map-support": "^0.3.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
