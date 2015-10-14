@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
-        <link rel="stylesheet" href="/node_modules/mocha/mocha.css" />
+        <link rel="stylesheet" href="./ghpages/stylesheets/mocha.css" />
 
         <style>
             #mocha h2 {
@@ -62,16 +62,16 @@
                 </footer>
             </main>
         </div>
-        <script src="/node_modules/chai/chai.js"></script>
-        <script src="/node_modules/mocha/mocha.js"></script>
-        <script src="/node_modules/sinon/pkg/sinon.js"></script>
+        <script src="./ghpages/scripts/mocha.js"></script>
+        <script src="./ghpages/scripts/chai.js"></script>
+        <script src="./ghpages/scripts/sinon.js"></script>
         <script>
             mocha.setup('bdd');
             var assert = chai.assert;
             var expect = chai.expect;
             var should = chai.should;
         </script>
-        <script src="/test/unit/build/tests.js"></script>
+        <script src="./ghpages/scripts/tests.js"></script>
         <script>
             mocha.run();
         </script>
