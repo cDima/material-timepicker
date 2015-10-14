@@ -144,7 +144,7 @@ var timepicker = new TimePicker(),
     openOnMilitary = document.getElementById('#openOn-example-military');
 
 openOnMilitary.addEventListener('focus', function(event) {
-    timepicker.openOnInput(event.target);
+    timepicker.openOnInput(event.target, {timeFormat: 'military'});
 });
 </code></pre>
                             </div>
