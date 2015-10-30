@@ -1,7 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-module.exports = "<div class=\"mtp-overlay\" style=\"display:none\">\n    <div class=\"mtp-wrapper\">\n        <div class=\"mtp-display\">\n            <span class=\"mtp-display__time\">12:00</span>\n            <span class=\"mtp-display__meridiem\">am</span>\n        </div><!-- END .mtp-display -->\n        <div class=\"mtp-picker\">\n            <div class=\"mtp-meridiem\">\n                <span class=\"mtp-clock--active\">am</span>\n                <span>pm</span>\n            </div><!-- END .mtp-meridiem -->\n            <div class=\"mtp-clock\">\n                <div class=\"mtp-clock__center\"></div>\n                <div class=\"mtp-clock__hand\"></div>\n                <ul class=\"mtp-clock__time mtp-clock__outer mtp-clock__hours\" style=\"display:none\">\n                    <li>3</li>\n                    <li>4</li>\n                    <li>5</li>\n                    <li>6</li>\n                    <li>7</li>\n                    <li>8</li>\n                    <li>9</li>\n                    <li>10</li>\n                    <li>11</li>\n                    <li class=\"mtp-clock--active\">12</li>\n                    <li>1</li>\n                    <li>2</li>\n                </ul>\n                <ul class=\"mtp-clock__time mtp-clock__outer mtp-clock__minutes\" style=\"display:none\">\n                    <li>15</li>\n                    <li>20</li>\n                    <li>25</li>\n                    <li>30</li>\n                    <li>35</li>\n                    <li>40</li>\n                    <li>45</li>\n                    <li>50</li>\n                    <li>55</li>\n                    <li class=\"mtp-clock--active\">0</li>\n                    <li>5</li>\n                    <li>10</li>\n                </ul>\n                <ul class=\"mtp-clock__time mtp-clock__hours-military\" style=\"display:none\">\n                    <div class=\"mtp-clock__inner\">\n                        <li>3</li>\n                        <li>4</li>\n                        <li>5</li>\n                        <li>6</li>\n                        <li>7</li>\n                        <li>8</li>\n                        <li>9</li>\n                        <li>10</li>\n                        <li>11</li>\n                        <li class=\"mtp-clock--active\">00</li>\n                        <li>1</li>\n                        <li>2</li>\n                    </div>\n                    <div class=\"mtp-clock__outer\">\n                        <li>15</li>\n                        <li>16</li>\n                        <li>17</li>\n                        <li>18</li>\n                        <li>19</li>\n                        <li>20</li>\n                        <li>21</li>\n                        <li>22</li>\n                        <li>23</li>\n                        <li>12</li>\n                        <li>13</li>\n                        <li>14</li>\n                    </div>\n                </ul>\n            </div><!-- END .mtp-clock -->\n            <div class=\"mtp-actions\">\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__cancel\">Cancel</button>\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__back\" style=\"display:none\">Back</button>\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__ok\">OK</button>\n            </div><!-- END .mtp-actions -->\n        </div><!-- END .mtp-picker -->\n    </div><!-- END .mtp-wrapper -->\n</div><!-- END .mtp-overlay -->\n";
-
-},{}],2:[function(require,module,exports){
 /**
  * Object.assign polyfill
  *
@@ -52,6 +49,17 @@ function assign(target) {
 exports['default'] = assign;
 module.exports = exports['default'];
 
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var template = "\n<div class=\"mtp-overlay\" style=\"display:none\">\n    <div class=\"mtp-wrapper\">\n        <div class=\"mtp-display\">\n            <span class=\"mtp-display__time\">12:00</span>\n            <span class=\"mtp-display__meridiem\">am</span>\n        </div><!-- END .mtp-display -->\n        <div class=\"mtp-picker\">\n            <div class=\"mtp-meridiem\">\n                <span class=\"mtp-clock--active\">am</span>\n                <span>pm</span>\n            </div><!-- END .mtp-meridiem -->\n            <div class=\"mtp-clock\">\n                <div class=\"mtp-clock__center\"></div>\n                <div class=\"mtp-clock__hand\"></div>\n                <ul class=\"mtp-clock__time mtp-clock__outer mtp-clock__hours\" style=\"display:none\">\n                    <li>3</li>\n                    <li>4</li>\n                    <li>5</li>\n                    <li>6</li>\n                    <li>7</li>\n                    <li>8</li>\n                    <li>9</li>\n                    <li>10</li>\n                    <li>11</li>\n                    <li class=\"mtp-clock--active\">12</li>\n                    <li>1</li>\n                    <li>2</li>\n                </ul>\n                <ul class=\"mtp-clock__time mtp-clock__outer mtp-clock__minutes\" style=\"display:none\">\n                    <li>15</li>\n                    <li>20</li>\n                    <li>25</li>\n                    <li>30</li>\n                    <li>35</li>\n                    <li>40</li>\n                    <li>45</li>\n                    <li>50</li>\n                    <li>55</li>\n                    <li class=\"mtp-clock--active\">0</li>\n                    <li>5</li>\n                    <li>10</li>\n                </ul>\n                <ul class=\"mtp-clock__time mtp-clock__hours-military\" style=\"display:none\">\n                    <div class=\"mtp-clock__inner\">\n                        <li>3</li>\n                        <li>4</li>\n                        <li>5</li>\n                        <li>6</li>\n                        <li>7</li>\n                        <li>8</li>\n                        <li>9</li>\n                        <li>10</li>\n                        <li>11</li>\n                        <li class=\"mtp-clock--active\">00</li>\n                        <li>1</li>\n                        <li>2</li>\n                    </div>\n                    <div class=\"mtp-clock__outer\">\n                        <li>15</li>\n                        <li>16</li>\n                        <li>17</li>\n                        <li>18</li>\n                        <li>19</li>\n                        <li>20</li>\n                        <li>21</li>\n                        <li>22</li>\n                        <li>23</li>\n                        <li>12</li>\n                        <li>13</li>\n                        <li>14</li>\n                    </div>\n                </ul>\n            </div><!-- END .mtp-clock -->\n            <div class=\"mtp-actions\">\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__cancel\">Cancel</button>\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__back\" style=\"display:none\">Back</button>\n                <button type=\"button\" class=\"mtp-actions__button mtp-actions__ok\">OK</button>\n            </div><!-- END .mtp-actions -->\n        </div><!-- END .mtp-picker -->\n    </div><!-- END .mtp-wrapper -->\n</div><!-- END .mtp-overlay -->\n";
+
+exports["default"] = template;
+module.exports = exports["default"];
+
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -65,9 +73,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _htmlTimepickerHtml = require('../html/timepicker.html');
+var _template = require('./template');
 
-var _htmlTimepickerHtml2 = _interopRequireDefault(_htmlTimepickerHtml);
+var _template2 = _interopRequireDefault(_template);
 
 var _assign = require('./assign');
 
@@ -84,7 +92,7 @@ var TimePicker = (function () {
     function TimePicker() {
         _classCallCheck(this, TimePicker);
 
-        this.template = _htmlTimepickerHtml2['default'];
+        this.template = _template2['default'];
         this.setupTemplate();
         this.currentStep = 0;
         this.defaultOptions = {};
@@ -163,7 +171,7 @@ var TimePicker = (function () {
         key: 'setupTemplate',
         value: function setupTemplate() {
             if (!this.isTemplateInDOM()) {
-                document.body.insertAdjacentHTML('beforeend', _htmlTimepickerHtml2['default']);
+                document.body.insertAdjacentHTML('beforeend', _template2['default']);
             }
         }
 
@@ -310,6 +318,7 @@ var TimePicker = (function () {
             this.cachedEls.clockHoursLi[9].dispatchEvent(new Event('click'));
             this.cachedEls.clockMinutesLi[9].dispatchEvent(new Event('click'));
             this.cachedEls.clockMilitaryHoursLi[9].dispatchEvent(new Event('click'));
+            this.cachedEls.meridiemSpans[0].dispatchEvent(new Event('click'));
         }
 
         /**
@@ -546,8 +555,8 @@ var TimePicker = (function () {
     return TimePicker;
 })();
 
-window.TimePicker = TimePicker;
+window.TimePicker = new TimePicker();
 exports['default'] = TimePicker;
 module.exports = exports['default'];
 
-},{"../html/timepicker.html":1,"./assign":2}]},{},[3]);
+},{"./assign":1,"./template":2}]},{},[3]);

@@ -55,7 +55,7 @@
 
                             In need of a timepicker for a current project I made this library. Built with plain JavaScript and no dependencies. Written in ES6 and SASS.
 
-                            The library currently supports both 12 and 24 time formats. Module loading is support but an object named `TimePicker` is also put into the window scope when the library is loaded.
+                            The library currently supports both 12 and 24 time formats.
 
                             This is my first time writing a DOM library in vanilla JS so feedback is appreciated!
                         </div>
@@ -160,7 +160,7 @@ openOnMilitary.addEventListener('focus', function(event) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
         <script src="./ghpages/scripts/timepicker.js"></script>
         <script>
-            var timepicker = new TimePicker(),
+            var timepicker = TimePicker,
                 bindMilitary = document.getElementById('bind-example-military'),
                 openOnStandard = document.getElementById('openOn-example'),
                 openOnMilitary = document.getElementById('openOn-example-military');

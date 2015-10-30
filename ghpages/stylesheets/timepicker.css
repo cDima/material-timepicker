@@ -20,7 +20,8 @@
 
 .mtp-picker {
   width: 100%;
-  height: auto; }
+  height: auto;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12); }
 
 .mtp-display {
   width: 100%;
@@ -188,6 +189,7 @@
               transform: rotate(330deg) translate(80px) rotate(-330deg); }
 
 .mtp-clock--active {
+  z-index: 444;
   background-color: #4CAF50;
   color: #FFFFFF; }
 
