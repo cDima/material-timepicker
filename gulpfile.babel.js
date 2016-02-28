@@ -26,7 +26,7 @@ gulp.task('compile:sass', () => tasks.compileSASS(sassOpts));
 gulp.task('compile:js', () => tasks.compileJS(jsOpts));
 gulp.task('test:js', () => tasks.testJS(jsOpts.testOpts));
 gulp.task('lint:js', () => tasks.lintJS('./src/js/*.js'));
-gulp.task('default', ['lint:js', 'test:js', 'compile:js']);
+gulp.task('default', ['lint:js', 'test:js', 'compile:sass', 'compile:js']);
 
 gulp.task('dist:app', ['compile:sass', 'compile:js'], () => {
     gulp.src('./build/js/timepicker.js').pipe(gulp.dest('./dist'));
